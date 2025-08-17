@@ -1,5 +1,5 @@
 -- task_4.sql
--- List full description of the books table without using DESCRIBE or EXPLAIN
+-- Full description of books table without DESCRIBE or EXPLAIN
 SELECT COLUMN_NAME AS 'Column Name',
        COLUMN_TYPE AS 'Data Type',
        IS_NULLABLE AS 'Nullable',
@@ -7,5 +7,5 @@ SELECT COLUMN_NAME AS 'Column Name',
        COLUMN_DEFAULT AS 'Default',
        EXTRA AS 'Extra'
 FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = 'alx_book_store'
+WHERE TABLE_SCHEMA = DATABASE()
   AND TABLE_NAME = 'books';
