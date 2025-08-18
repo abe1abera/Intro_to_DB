@@ -1,11 +1,11 @@
 -- task_4.sql
 -- Full description of books table without DESCRIBE or EXPLAIN
-SELECT COLUMN_NAME AS 'Column Name',
-       COLUMN_TYPE AS 'Data Type',
-       IS_NULLABLE AS 'Nullable',
-       COLUMN_KEY AS 'Key',
-       COLUMN_DEFAULT AS 'Default',
-       EXTRA AS 'Extra'
+SELECT COLUMN_NAME,
+       COLUMN_TYPE,
+       IS_NULLABLE,
+       COLUMN_KEY,
+       COLUMN_DEFAULT,
+       EXTRA
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_SCHEMA = DATABASE()
   AND TABLE_NAME = 'books';
